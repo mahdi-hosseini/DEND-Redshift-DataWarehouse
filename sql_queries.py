@@ -1,7 +1,7 @@
 from pipeline import read_config
 
 # CONFIG
-config = read_config("dwh.cfg")
+config = read_config("config/dwh.cfg")
 
 # DROP TABLES
 

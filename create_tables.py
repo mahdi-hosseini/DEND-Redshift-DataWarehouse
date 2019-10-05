@@ -7,7 +7,7 @@ from sql_queries import create_table_queries, drop_table_queries
 
 
 def main():
-    config = read_config("dwh.cfg")
+    config = read_config("config/dwh.cfg")
 
     conn_str = "host={} dbname={} user={} password={} port={}".format(
         *config["CLUSTER"].values()
