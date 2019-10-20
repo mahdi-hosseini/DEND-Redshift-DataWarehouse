@@ -120,7 +120,8 @@ staging_events_copy = (
 COPY staging_events FROM '{}'
 CREDENTIALS 'aws_iam_role={}'
 JSON '{}'
-MANIFEST;
+MANIFEST
+COMPUPDATE OFF STATUPDATE OFF;
 """
 ).format(
     config["S3"]["LOG_DATA_MANIFEST"],
@@ -133,7 +134,8 @@ staging_songs_copy = (
 COPY staging_songs FROM '{}'
 CREDENTIALS 'aws_iam_role={}'
 JSON 'auto'
-MANIFEST;
+MANIFEST
+COMPUPDATE OFF STATUPDATE OFF;
 """
 ).format(config["S3"]["SONG_DATA_MANIFEST"], config["IAM_ROLE"]["ARN"])
 
